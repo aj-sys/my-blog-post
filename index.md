@@ -61,47 +61,46 @@ sudo ip netns exec priv_subnet2 ip addr add 10.0.2.2/24 dev veth-priv2
 sudo ip netns exec router2 ip addr add 10.0.1.1/24 dev veth-r2-pub
 sudo ip netns exec router2 ip addr add 10.0.2.1/24 dev veth-r2-priv
 
+
 Assigns IP addresses so subnets can communicate via the router.
 ________________________________________
 
 ### Step 5: Bring Up Interfaces
 
-sudo ip netns exec pub_subnet2 ip link set veth-pub2 up
+```bash sudo ip netns exec pub_subnet2 ip link set veth-pub2 up
 sudo ip netns exec router2 ip link set veth-r2-pub up
 sudo ip netns exec priv_subnet2 ip link set veth-priv2 up
-sudo ip netns exec router2 ip link set veth-r2-priv up
+sudo ip netns exec router2 ip link set veth-r2-priv up```
 
 Activates all interfaces including loopback for proper network functionality.
 ________________________________________
 
 ### Step 6: Enable Packet Forwarding
 
-sudo ip netns exec router2 sysctl -w net.ipv4.ip_forward=1
+```bash sudo ip netns exec router2 sysctl -w net.ipv4.ip_forward=1```
 
 Lets the router namespace forward traffic between subnets.
 ________________________________________
 
 ### Step 7: Add Default Routes
 
-sudo ip netns exec pub_subnet2 ip route add default via 10.0.1.1
-sudo ip netns exec priv_subnet2 ip route add default via 10.0.2.1
+```bash sudo ip netns exec pub_subnet2 ip route add default via 10.0.1.1
+sudo ip netns exec priv_subnet2 ip route add default via 10.0.2.1```
 
 Ensures packets know where to go outside each namespace.
 ________________________________________
 
 ### Step 8: Test Connectivity
 
-sudo ip netns exec pub_subnet2 ping -c 3 10.0.1.1
-sudo ip netns exec priv_subnet2 ping -c 3 10.0.1.2
-
+```bash sudo ip netns exec pub_subnet2 ping -c 3 10.0.1.1
+sudo ip netns exec priv_subnet2 ping -c 3 10.0.1.2```
 
 Confirms that private and public subnets can reach each other via the router.
 ________________________________________
 
 ### Step 9: Run a Simple HTTP Server
 
-sudo ip netns exec pub_subnet2 python3 -m http.server 80
-
+```bash sudo ip netns exec pub_subnet2 python3 -m http.server 80```
 
 Hosts a test web server in the public subnet.
 ________________________________________
