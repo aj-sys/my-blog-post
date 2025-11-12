@@ -131,6 +131,13 @@ ________________________________________
 - **Demo Video:** [Watch Demo Video](screenshots/vpc-demo.mp4)
   
   
+### Project Demo Video
+
+<video width="640" height="360" controls>
+  <source src="screenshots/vpc-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 **Conclusion**
 
@@ -140,4 +147,5 @@ This project demonstrates a hands-on, local simulation of a VPC using Linux name
 - Understanding cloud network concepts without needing AWS.
 GitHub Repository
 You can find the full project here: [VPC on Linux Project]( https://github.com/aj-sys/vpc_setup_on_linux_project.git)
+
 
