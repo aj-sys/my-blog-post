@@ -23,7 +23,7 @@ The architecture consists of:
  
 The diagram shows two subnets connected via a router namespace.
 
-- **Architectural Diagram:** ![Architecture ](screenshots\vpc_architetural_diagram.png)
+- **Architectural Diagram:** ![Architecture ](screenshots/vpc_architetural_diagram.png)
   
 ________________________________________
 
@@ -105,19 +105,19 @@ If you see HTML output, routing and connectivity are working correctly.
 ________________________________________
 
 **Screenshots and Videos**
-- **Isolation Testing:** ![Isolation Testing](screenshots\isolation-testing.png)
+- **Isolation Testing:** ![Isolation Testing](screenshots/isolation-testing.png)
   
-- **HTTP Server Running:** ![HTTP Server Running](screenshots\http-server-running.png)
+- **HTTP Server Running:** ![HTTP Server Running](screenshots/http-server-running.png)
   
   
--  **Private Subnet Access:** ![ private subnet access](screenshots\access-from-private-subnet.png)
+-  **Private Subnet Access:** ![ private subnet access](screenshots/access-from-private-subnet.png)
   
 
-- **Cleanup Success:** ![Cleanup Success](screenshots\cleanup-success.png)
+- **Cleanup Success:** ![Cleanup Success](screenshots/cleanup-success.png)
   
 **Live screen recording:**
 
-- **Demo Video:** [Watch Demo Video](screenshots\vpc-demo.mp4)
+- **Demo Video:** [Watch Demo Video](screenshots/vpc-demo.mp4)
   
   
 
