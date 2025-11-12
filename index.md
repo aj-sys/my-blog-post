@@ -108,8 +108,7 @@ ________________________________________
 
 ### Step 10: Access from Private Subnet
 
-sudo ip netns exec priv_subnet2 curl http://10.0.1.2
-
+```bash sudo ip netns exec priv_subnet2 curl http://10.0.1.2```
 
 If you see HTML output, routing and connectivity are working correctly.
 ________________________________________
