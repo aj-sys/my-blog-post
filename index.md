@@ -21,11 +21,7 @@ The architecture consists of:
 
 ### Architectural Diagram
 
-![Architecture](screenshots/architecture.png)
-
-<video width="640" height="360" controls>
-  <source src="screenshots/vpc-demo.mp4" type="video/mp4">
-</video>
+![Architecture](screenshots/vpc_architetural_diagram.png)
 
 ---
 
