@@ -102,12 +102,14 @@ ________________________________________
 
 sudo ip netns exec pub_subnet2 python3 -m http.server 80
 
+
 Hosts a test web server in the public subnet.
 ________________________________________
 
 ### Step 10: Access from Private Subnet
 
 sudo ip netns exec priv_subnet2 curl http://10.0.1.2
+
 
 If you see HTML output, routing and connectivity are working correctly.
 ________________________________________
